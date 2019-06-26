@@ -18,6 +18,7 @@ OCR_for_AliYun_tianchi_Competition
 sh setup.sh
 ```
 即：
+```
 pip install numpy scipy matplotlib pillow
 pip install easydict opencv-python keras h5py PyYAML
 pip install cython==0.24
@@ -27,12 +28,11 @@ pip install tensorflow-gpu==1.3.0
 chmod +x ./ctpn/lib/utils/make.sh
 cd ./ctpn/lib/utils/ && ./make.sh
 
-当使用cou时：
 # for cpu
 pip install tensorflow==1.3.0
 chmod +x ./ctpn/lib/utils/make_cpu.sh
 cd ./ctpn/lib/utils/ && ./make_cpu.sh
-
+```
 
 ## Demo
 将测试图片放入test_images目录，检测结果会保存到test_result中
@@ -51,6 +51,7 @@ chmod +x make.sh
 ./make.sh
 ```
 即：
+```
 cython bbox.pyx
 cython cython_nms.pyx
 cython gpu_nms.pyx
@@ -58,6 +59,7 @@ python setup.py build_ext --inplace
 mv utils/* ./
 rm -rf build
 rm -rf utils
+```
 详细内容参见ctpn/README.md
 
 ### DenseNet + CTC训练
